@@ -15,7 +15,7 @@ namespace Blog.Core.Extensions
         {
             if (services == null) throw new ArgumentNullException(nameof(services));
 
-            string wwwrootFolderPath = Path.Combine(_env.ContentRootPath, "wwwroot");
+            string wwwrootFolderPath = Path.Combine(AppContext.BaseDirectory, "wwwroot");
             string zipUiItemFiles = Path.Combine(wwwrootFolderPath, "ui.zip");
             if (!File.Exists(Path.Combine(wwwrootFolderPath, "ui", "index.html")))
             {
